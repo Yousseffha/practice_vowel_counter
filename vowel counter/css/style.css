@@ -1,0 +1,150 @@
+/*start varibales*/
+
+:root {
+    --MainColor: #367573;
+}
+
+/*end varibales*/
+
+/*start global rules*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #dbf3f5;
+}
+
+.box {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    display: inline;
+}
+
+/*small*/
+
+@media(min-width: 768px) {
+    .box {
+        width: 750px;
+    }
+}
+
+/*medium*/
+
+@media(min-width: 992px) {
+    .box {
+        width: 970px;
+    }
+}
+
+/*large*/
+
+@media(min-width: 1200px) {
+    .box {
+        width: 1170px;
+    }
+}
+
+/*end global rules*/
+
+/*start box*/
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box h1 {
+    color: var(--MainColor);
+    text-transform: capitalize;
+}
+
+.box form input {
+    display: block;
+    width: 45vh;
+    padding: 15px 15px;
+    margin-bottom: 25px;
+}
+
+.box .btns-container {
+    display: flex;
+    justify-content: center;
+}
+
+.box form button {
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin:0 15px 25px 0;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.box form button:first-of-type {
+    background-color: green;
+}
+
+.box form button:last-of-type {
+    background-color: red;
+}
+
+.box form button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #808080;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.box form button:hover::before {
+    width: 100%;
+}
+
+.box .result {
+    background-color: var(--MainColor);
+    color: white;
+    width: fit-content;
+    padding: 25px 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.box .result span {
+    background-color: white;
+    color: var(--MainColor);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.box .sentence {
+    line-height: 3;
+    text-align: left;
+}
+
+.box .sentence span {
+    margin-left: 5px;
+}
+
+/*end box*/
